@@ -67,4 +67,23 @@ public class calculate {
         return dataset.completeEntropy - ig;
     }
 
+    public static void max() {
+        // find maximum information gain
+        double max = dataset.mathEntropy;
+        if(dataset.statsEntropy   > max) { max = dataset.statsEntropy; }
+        if(dataset.scienceEntropy > max) { max = dataset.scienceEntropy; }
+        if(dataset.englishEntropy > max) { max = dataset.englishEntropy; }
+
+        // print maximum information gain
+        if(max == dataset.mathEntropy) {
+            System.out.println("The class with maximum information gain is: Math");
+        } else if(max == dataset.statsEntropy) {
+            System.out.println("The class with maximum information gain is: Statistics");
+        } else if(max == dataset.scienceEntropy) {
+            System.out.println("The class with maximum information gain is: Science");
+        } else if(max == dataset.englishEntropy) {
+            System.out.println("The class with maximum information gain is: English");
+        }
+    }
+
 }

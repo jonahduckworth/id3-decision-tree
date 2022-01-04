@@ -1,6 +1,8 @@
 public class driver {
 
     public static void main(String[] args) {
+        double max;
+
         // get dataset from .csv file
         dataset.getDataset();
 
@@ -22,7 +24,10 @@ public class driver {
 
         // english category
         categories.getEnglish(); // calculate entropy for category
-        System.out.println("English information gain: " + dataset.englishEntropy);
+        System.out.println("English information gain: " + dataset.englishEntropy + "\n");
+
+        calculate.max();
+
     }
 
 }
