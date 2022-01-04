@@ -55,4 +55,16 @@ public class calculate {
         return Math.log(N) / Math.log(2);
     }
 
+    public static double averageEntropy() {
+        return ((dataset.ap * (dataset.apCount / dataset.dataset.length))
+                + (dataset.a  * (dataset.aCount  / dataset.dataset.length))
+                + (dataset.am * (dataset.amCount / dataset.dataset.length))
+                + (dataset.bp * (dataset.bpCount / dataset.dataset.length))
+                + (dataset.b  * (dataset.bCount  / dataset.dataset.length)));
+    }
+
+    public static double informationGain(double ig) {
+        return dataset.completeEntropy - ig;
+    }
+
 }

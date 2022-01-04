@@ -10,7 +10,7 @@ public class driver {
 
         // math category
         categories.getMath(); // calculate entropy for category
-        System.out.println(dataset.ap + " " + dataset.apCount);
+        System.out.println("Math information gain: " + dataset.mathEntropy);
     }
 
 
