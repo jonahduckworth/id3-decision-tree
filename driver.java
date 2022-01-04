@@ -5,7 +5,9 @@ public class driver {
         dataset.getDataset();
 
         // calculate complete entropy of dataset
-        categories.getEntropy();
+        categories.getEntropy("Yes", 4);
+        categories.getEntropy("No", 4);
+        dataset.completeEntropy = calculate.entropy();
         System.out.println("\nComplete entropy of dataset: " + dataset.completeEntropy + "\n");
 
         // math category
@@ -25,6 +27,12 @@ public class driver {
         System.out.println("English information gain: " + dataset.englishEntropy + "\n");
 
         calculate.max();
+        System.out.println(dataset.pureYes + " is a pure class of Math");
+
+        // calculate complete entropy of dataset
+        categories.getEntropy("A", 0);
+        dataset.completeEntropy = calculate.entropy();
+        System.out.println("\nComplete entropy of dataset: " + dataset.completeEntropy + "\n");
 
     }
 
