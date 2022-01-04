@@ -6,4 +6,10 @@ public class categories {
         dataset.completeEntropy = calculate.entropy();
     }
 
+    public static void getMath() {
+        calculate.getCategory("A+", 0);
+        dataset.ap = calculate.entropy();
+        dataset.apCount = dataset.count;
+    }
+
 }
