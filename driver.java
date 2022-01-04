@@ -6,6 +6,7 @@ public class driver {
 
         // calculate complete entropy of dataset
         categories.getEntropy();
+        System.out.println("\nComplete entropy of dataset: " + dataset.completeEntropy + "\n");
     }
 
 
