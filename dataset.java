@@ -8,6 +8,10 @@ public class dataset {
     public static int yes = 0;
     public static int no = 0;
 
+    public static boolean pure = false;
+    public static String pureYes;
+    public static String pureNo;
+
     public static double mathEntropy;
     public static double statsEntropy;
     public static double scienceEntropy;

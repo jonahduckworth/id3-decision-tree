@@ -1,8 +1,6 @@
 public class driver {
 
     public static void main(String[] args) {
-        double max;
-
         // get dataset from .csv file
         dataset.getDataset();
 
