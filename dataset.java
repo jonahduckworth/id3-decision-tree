@@ -8,13 +8,17 @@ public class dataset {
     public static int yes = 0;
     public static int no = 0;
 
+    public static double mathEntropy;
+    public static double statsEntropy;
+    public static double scienceEntropy;
+    public static double englishEntropy;
+    public static double completeEntropy;
+
     public static double ap, apCount;
     public static double  a, aCount;
     public static double am, amCount;
     public static double bp, bpCount;
     public static double  b, bCount;
-
-    public static double completeEntropy;
     public static double count;
 
     public static void getDataset() {
