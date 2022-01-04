@@ -1,9 +1,7 @@
 public class categories {
 
-    public static void getEntropy() {
-        calculate.getCategory("Yes", 4);
-        calculate.getCategory("No", 4);
-        dataset.completeEntropy = calculate.entropy();
+    public static void getEntropy(String a, int b) {
+        calculate.getCategory(a, b);
     }
 
     public static void getMath() {
