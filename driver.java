@@ -11,8 +11,18 @@ public class driver {
         // math category
         categories.getMath(); // calculate entropy for category
         System.out.println("Math information gain: " + dataset.mathEntropy);
+
+        // statistics category
+        categories.getStats(); // calculate entropy for category
+        System.out.println("Statistics information gain: " + dataset.statsEntropy);
+
+        // science category
+        categories.getScience(); // calculate entropy for category
+        System.out.println("Science information gain: " + dataset.scienceEntropy);
+
+        // english category
+        categories.getEnglish(); // calculate entropy for category
+        System.out.println("English information gain: " + dataset.englishEntropy);
     }
-
-
 
 }
