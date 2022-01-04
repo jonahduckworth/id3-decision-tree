@@ -4,7 +4,12 @@ import java.io.IOException;
 
 public class dataset {
     public static String[][] dataset = new String[14][5];
+
+    public static int yes = 0;
+    public static int no = 0;
+
     public static double completeEntropy;
+    public static double count;
 
     public static void getDataset() {
         String line;
