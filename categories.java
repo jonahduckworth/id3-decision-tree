@@ -1,24 +1,25 @@
 public class categories {
 
-    public static void getEntropy(String a, int b) {
-        calculate.getCategory(a, b);
+    // calculate total entropy of dataset
+    public static void getEntropy(String grade, int subject) {
+        calculate.getCategory(grade, subject, null, null);
     }
 
-    public static void getMath() {
+    public static void getMath(Integer follow, String gradeFollow) {
         // calculate entropy for every grade
-        calculate.getCategory("A+", 0);
+        calculate.getCategory("A+", 0, follow, gradeFollow);
         dataset.ap = calculate.entropy();
         dataset.apCount = dataset.count;
-        calculate.getCategory("A", 0);
+        calculate.getCategory("A", 0,  follow, gradeFollow);
         dataset.a = calculate.entropy();
         dataset.aCount = dataset.count;
-        calculate.getCategory("A-", 0);
+        calculate.getCategory("A-", 0,  follow, gradeFollow);
         dataset.am = calculate.entropy();
         dataset.amCount = dataset.count;
-        calculate.getCategory("B+", 0);
+        calculate.getCategory("B+", 0,  follow, gradeFollow);
         dataset.bp = calculate.entropy();
         dataset.bpCount = dataset.count;
-        calculate.getCategory("B", 0);
+        calculate.getCategory("B", 0,  follow, gradeFollow);
         dataset.b = calculate.entropy();
         dataset.bCount = dataset.count;
 
@@ -28,21 +29,21 @@ public class categories {
         dataset.mathEntropy = calculate.informationGain(dataset.mathEntropy);
     }
 
-    public static void getStats() {
+    public static void getStats(Integer follow, String gradeFollow) {
         // calculate entropy for every grade
-        calculate.getCategory("A+", 1);
+        calculate.getCategory("A+", 1,  follow, gradeFollow);
         dataset.ap = calculate.entropy();
         dataset.apCount = dataset.count;
-        calculate.getCategory("A", 1);
+        calculate.getCategory("A", 1,  follow, gradeFollow);
         dataset.a = calculate.entropy();
         dataset.aCount = dataset.count;
-        calculate.getCategory("A-", 1);
+        calculate.getCategory("A-", 1,  follow, gradeFollow);
         dataset.am = calculate.entropy();
         dataset.amCount = dataset.count;
-        calculate.getCategory("B+", 1);
+        calculate.getCategory("B+", 1,  follow, gradeFollow);
         dataset.bp = calculate.entropy();
         dataset.bpCount = dataset.count;
-        calculate.getCategory("B", 1);
+        calculate.getCategory("B", 1,  follow, gradeFollow);
         dataset.b = calculate.entropy();
         dataset.bCount = dataset.count;
 
@@ -52,21 +53,21 @@ public class categories {
         dataset.statsEntropy = calculate.informationGain(dataset.statsEntropy);
     }
 
-    public static void getScience() {
+    public static void getScience(Integer follow, String gradeFollow) {
         // calculate entropy for every grade
-        calculate.getCategory("A+", 2);
+        calculate.getCategory("A+", 2,  follow, gradeFollow);
         dataset.ap = calculate.entropy();
         dataset.apCount = dataset.count;
-        calculate.getCategory("A", 2);
+        calculate.getCategory("A", 2,  follow, gradeFollow);
         dataset.a = calculate.entropy();
         dataset.aCount = dataset.count;
-        calculate.getCategory("A-", 2);
+        calculate.getCategory("A-", 2,  follow, gradeFollow);
         dataset.am = calculate.entropy();
         dataset.amCount = dataset.count;
-        calculate.getCategory("B+", 2);
+        calculate.getCategory("B+", 2,  follow, gradeFollow);
         dataset.bp = calculate.entropy();
         dataset.bpCount = dataset.count;
-        calculate.getCategory("B", 2);
+        calculate.getCategory("B", 2,  follow, gradeFollow);
         dataset.b = calculate.entropy();
         dataset.bCount = dataset.count;
 
@@ -76,21 +77,21 @@ public class categories {
         dataset.scienceEntropy = calculate.informationGain(dataset.scienceEntropy);
     }
 
-    public static void getEnglish() {
+    public static void getEnglish(Integer follow, String gradeFollow) {
         // calculate entropy for every grade
-        calculate.getCategory("A+", 3);
+        calculate.getCategory("A+", 3,  follow, gradeFollow);
         dataset.ap = calculate.entropy();
         dataset.apCount = dataset.count;
-        calculate.getCategory("A", 3);
+        calculate.getCategory("A", 3,  follow, gradeFollow);
         dataset.a = calculate.entropy();
         dataset.aCount = dataset.count;
-        calculate.getCategory("A-", 3);
+        calculate.getCategory("A-", 3,  follow, gradeFollow);
         dataset.am = calculate.entropy();
         dataset.amCount = dataset.count;
-        calculate.getCategory("B+", 3);
+        calculate.getCategory("B+", 3,  follow, gradeFollow);
         dataset.bp = calculate.entropy();
         dataset.bpCount = dataset.count;
-        calculate.getCategory("B", 3);
+        calculate.getCategory("B", 3,  follow, gradeFollow);
         dataset.b = calculate.entropy();
         dataset.bCount = dataset.count;
 
