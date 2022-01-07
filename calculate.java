@@ -33,15 +33,15 @@ public class calculate {
 
         // if entropy has already been found for the category, search for pure class
         if(dataset.pure) {
-            pureClass(grade, subject);
+            pureClass(grade, subject, follow, gradeFollow);
         }
 
     }
 
-    public static void pureClass(String grade, int subject) {
+    public static void pureClass(String grade, int subject, Integer follow, String gradeFollow) {
         if((dataset.yes > 0) && (dataset.no == 0)) {
             for(int i = 0; i < dataset.dataset.length; i++) {
-                 if(Objects.equals(dataset.dataset[i][subject], grade) && Objects.equals(dataset.dataset[i][4], "Yes")) {
+                 if(Objects.equals(dataset.dataset[i][subject], grade) && Objects.equals(dataset.dataset[i][4], "Yes") && (follow == null || Objects.equals(dataset.dataset[i][follow], gradeFollow))) {
                     // MAYBE HERE ADD NULL CATEGORIES TO LIST OF CHECKED NODES
                     dataset.dataset[i][subject] = null;
                     dataset.dataset[i][4] = null;
@@ -51,7 +51,7 @@ public class calculate {
             }
         } else if((dataset.no > 0) && (dataset.yes == 0)) {
             for(int i = 0; i < dataset.dataset.length; i++) {
-                if(Objects.equals(dataset.dataset[i][subject], grade) && Objects.equals(dataset.dataset[i][4], "No")) {
+                if(Objects.equals(dataset.dataset[i][subject], grade) && Objects.equals(dataset.dataset[i][4], "No") && (follow == null || Objects.equals(dataset.dataset[i][follow], gradeFollow))) {
                     // MAYBE HERE ADD NULL CATEGORIES TO LIST OF CHECKED NODES
                     dataset.dataset[i][subject] = null;
                     dataset.dataset[i][4] = null;
@@ -66,7 +66,6 @@ public class calculate {
 
         // calculate total
         double total = dataset.yes + dataset.no;
-        System.out.println(dataset.yes + " " + dataset.no);
 
         // entropy == 0 if there aren't any attributes in a given category
         if((dataset.yes == 0) || (dataset.no == 0)) {
